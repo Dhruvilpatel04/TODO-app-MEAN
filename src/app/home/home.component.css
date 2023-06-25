@@ -1,0 +1,143 @@
+
+#navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#navbar h1 {
+  margin: 0;
+  flex: 1;
+  font-size: 24px;
+  text-align: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#search-input {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+  width: 200px;
+  font-size: 16px;
+}
+
+a {
+  margin-left: 20px;
+  color: #4287f5;
+  text-decoration: none;
+  font-size: medium;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+path{
+  cursor: pointer;
+}
+/* Content styles */
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.left-panel {
+  flex: 0 0 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.left-panel h2 {
+  margin-top: 0;
+}
+
+.todo-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.todo-form button {
+  padding: 10px;
+  background-color: #4287f5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.todo-form button:hover {
+  background-color: #366dc0;
+}
+.edit-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.todo-list{
+width: 90%;
+margin: 10px;
+}
+
+.card {
+  background-color: #fff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card ol {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.card li {
+  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card-actions button {
+  padding: 10px 20px;
+  background-color: #4287f5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-actions button:hover {
+  background-color: #366dc0;
+}

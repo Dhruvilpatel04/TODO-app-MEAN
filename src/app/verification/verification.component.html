@@ -1,0 +1,38 @@
+<!-- verification.component.html -->
+
+<header id="navbar">
+    <a class="nav-link" routerLink="/login">Login</a>
+    <a class="nav-link" routerLink="/signup">Sign Up</a>
+    <h1>Todo App</h1>
+    <input id="search-input" type="text" placeholder="Search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </header>
+  
+  <div class="container">
+    <h1>Verification</h1>
+    <ng-container *ngIf="!emailVerified">
+      <form id="verification-form" (ngSubmit)="onVerify()">
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required [(ngModel)]="email">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </ng-container>
+    <ng-container *ngIf="emailVerified">
+      <form id="password-form" (ngSubmit)="onPasswordSubmit()">
+        <div class="form-group">
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" name="new-password" required [(ngModel)]="newPassword">
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required [(ngModel)]="confirmPassword">
+        </div>
+        <button type="submit">Change Password</button>
+      </form>
+    </ng-container>
+  </div>
+  

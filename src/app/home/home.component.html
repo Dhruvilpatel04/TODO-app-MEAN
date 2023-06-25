@@ -1,0 +1,39 @@
+<header id="navbar">
+    <a class="nav-link" routerLink="/login">Login</a>
+      <a class="nav-link" routerLink="/signup">Sign Up</a>
+    <h1>Todo App</h1>
+    <input id="search-input" type="text" placeholder="Search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg>
+  </header>
+<div class="content">
+  <div class="left-panel">
+    <h2>Add Todo</h2>
+    <div class="todo-form">
+      <input type="text" [(ngModel)]="newTodo.title" placeholder="New Todo" />
+      <button (click)="addTodo()">Add Todo</button>
+    </div>
+  </div>
+  <div class="right-panel">
+
+    <div class="todo-list">
+      <div *ngFor="let todo of todos" class="card">
+        <h3>{{ todo.title }}</h3>
+        <hr>
+        <ol>
+          <li *ngFor="let note of todo.notes">
+            {{ note.text }}
+            <span class="edit-icon" (click)="editNoteClick(note)">✏</span>
+          </li>
+        </ol>
+        <div class="card-actions">
+          <input type="text" [(ngModel)]="todo.newNote" placeholder="New Note" />
+          <button (click)="addNoteButtonClick(todo)">Add Note</button>
+          <button (click)="editTitleClick(todo)">Edit Title</button>
+          <button (click)="deleteCardClick(todo)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
